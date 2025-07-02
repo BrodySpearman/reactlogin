@@ -1,5 +1,4 @@
-import Image from "next/image";
-import TitleSplash from "./components/titlesplash";
+import TitleSplash from "./components/titlesplash/titlesplash";
 import LoginForm from "./components/loginform/loginform";
 
 

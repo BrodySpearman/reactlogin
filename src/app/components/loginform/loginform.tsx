@@ -1,3 +1,7 @@
+'use client';
+import Form from 'next/form';
+import { submitForm } from '@/app/api/submit';
+
 export default function LoginForm() {
     return (
         <div className="loginBox bg-background items-center justify-center flex flex-col h-full w-full">
@@ -10,7 +14,7 @@ export default function LoginForm() {
             </div>
 
             <div className="loginFormArea w-7/8 h-4/6">
-                <form className="loginGrid grid grid-cols-2 grid-rows-3 gap-x-3 w-full h-8/12 mt-4">
+                <Form action={submitForm} id="loginForm" className="loginGrid grid grid-cols-2 grid-rows-3 gap-x-3 w-full h-8/12 mt-4">
                     <div>
                         <label htmlFor="firstName">First Name
                         <input type="text" id="firstName" name="firstName" placeholder="John" />
@@ -41,9 +45,12 @@ export default function LoginForm() {
                         <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" />
                         </label>
                     </div>
-                </form>
+                </Form>
                 <div className="">
-                    <button type="submit" className="submitBtn w-full bg-background border-2 border-foreground pt-2 pb-2 mt-3 text-foreground rounded-md relative">Sign up</button>
+                    <button type="submit" form="loginForm" 
+                    className="submitBtn w-full bg-background border-2 border-foreground pt-2 pb-2 mt-3 text-foreground rounded-md relative">
+                        Sign up
+                    </button>
                 </div>
             </div>
         </div>
