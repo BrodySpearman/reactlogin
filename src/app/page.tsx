@@ -4,7 +4,7 @@ import LoginForm from "./components/loginform/loginform";
 
 export default function Home() {
   return (
-    <div className="flex flex-row w-screen h-screen bg-[url('/v2.png')] bg-opacity-50 bg-cover bg-center">
+    <div className="flex flex-row w-screen h-screen background bg-opacity-50">
       <div className="title-splash flex-auto basis-2/6">
         <div className="titlebox items-center flex relative top-1/5 justify-center h-12/20 pl-55">
           <TitleSplash />

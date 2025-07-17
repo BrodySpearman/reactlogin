@@ -5,6 +5,7 @@
   --foreground: #ededed;
   --border-color: #5b5e5c;
   --text-color: #a4a5a6;
+  --error-text-color: #ff4545;
 }
 
 @theme inline {
@@ -19,6 +20,7 @@
     --foreground: #ededed;
     --border-color: #5b5e5c;
     --text-color: #c4c4c4;
+    --error-text-color: #ff4545;
   }
 }
 
@@ -61,20 +63,31 @@ input:focus {
 
 label {
   line-height: 1.7;
-  font-size: 18px;
+  font-size: 17px;
   color: var(--text-color);
+}
+
+.background {
+  background-image: url('/v2.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .flex-border {
   border: 1px solid red;
 }
 
-.loginBox {
+.flexBox {
   border: 1px solid var(--border-color);
   border-radius: 15px;
+}
+
+.loginBox {
   width: 90%;
   height: 90%;
 }
+
+
 
 .titleCard {
   background-color: #242424d7;
@@ -87,10 +100,24 @@ label {
   cursor: default;
 }
 
+.errorMsg {
+  color: var(--error-text-color);
+  font-size: 12px;
+  display: inline;
+  float: right;
+  padding-right: 4px;
+  position: relative;
+  top: 10px;
+}
+
 .submitBtn {
   bottom: -20px;
   font-size: 32px;
   border: 2px solid var(--border-color);
+}
+
+.deemphasized {
+  color: #bdbdbd;
 }
 
 .submitBtn:hover {
